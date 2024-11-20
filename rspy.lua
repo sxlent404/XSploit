@@ -1,6 +1,6 @@
 -- coded by sxlent404
 
-local gui = Instance.new("ScreenGui")
+local gui = Instance.new("RSPY")
 gui.Name = game:GetService("HttpService"):GenerateGUID(false)
 if syn and syn.protect_gui then
     syn.protect_gui(gui)
@@ -192,7 +192,7 @@ local function handleRemote(remote, ...)
     if not spyEnabled then return end
     
     local args = {...}
-    local code = string.format("%s:%sServer(%s)",
+    local code = string.format("game.%s:%sServer(%s)",
         remote:GetFullName(),
         remote:IsA("RemoteEvent") and "Fire" or "Invoke",
         convertTableToString(args))
