@@ -1,6 +1,6 @@
 -- coded by sxlent404
 
-local gui = Instance.new("RSPY")
+local gui = Instance.new("ScreenGui")
 gui.Name = game:GetService("HttpService"):GenerateGUID(false)
 if syn and syn.protect_gui then
     syn.protect_gui(gui)
